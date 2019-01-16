@@ -1,0 +1,7 @@
+{
+  "proxyTable": {
+    "/api": {
+      "target": "https://modeling-test.mypaas.com.cn/"
+    }
+  }
+}
