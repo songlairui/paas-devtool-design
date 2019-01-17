@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node main.js",
-    "design": "node serv/main.js --devmode biz --pre yes --clients MiniProgram",
+    "design": "node main.js --devmode biz --clients MiniProgram",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
