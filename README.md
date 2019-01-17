@@ -1,8 +1,12 @@
-## devtool
+# devtool
 
 使用 engine-mobile(或webapp) 目录启动paas开发环境, 切换 config 配置, 不重启 webpackDevMiddleware
 
-#### 使用方式
+### 👌
+
+- [x] --pre yes 启用 engine-mobile 目录下  eslint
+
+### 使用方式
 
 
 ```bash
@@ -17,7 +21,7 @@ yarn design  // 启用设计时
 
 更改 config/index.json 中 proxyTarget 参数配置,自动重启express 
 
-#### 实现方式
+### 实现方式
 
 `virtualization` 目录
 
