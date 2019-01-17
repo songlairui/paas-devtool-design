@@ -4,16 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "design": "node serv/index.js --devmode biz --buildRem yes --pre yes --clients MiniProgram",
+    "start": "node main.js",
+    "design": "node serv/main.js --devmode biz --pre yes --clients MiniProgram",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "engine-mobile": "git+ssh://git@git.mysoft.com.cn:mic-paas/webapp.git#sp-dev",
-    "is-json": "^2.0.1",
-    "lodash": "^4.17.11",
-    "vue-json-pretty": "^1.4.1"
+    "fs-monkey": "^0.3.3",
+    "memfs": "^2.14.2",
+    "memory-fs": "^0.4.1",
+    "unionfs": "^3.0.2"
   }
 }

@@ -5,5 +5,4 @@ require('./chdir')(targetFolder);
 require('./combineFs')({ targetFolder, patchFolder, fsMem, fsReal });
 require('./patch-require')(ufs);
 
-// require('/Users/songlairui/PaaS/webapp/build/requireModule.js');
-// require('/Users/songlairui/PaaS/webapp/build/middleware.js');
+module.exports = { targetFolder, patchFolder, fsMem, fsReal, ufs };
