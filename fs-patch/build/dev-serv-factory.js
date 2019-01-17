@@ -45,6 +45,10 @@ module.exports = async function overwriteHttpServer({
     if (typeof options === 'string') {
       options = { target: options };
     }
+    // 合并 proxyTarget
+    if (proxyTarget) {
+      options.target = proxyTarget;
+    }
     app.use(proxyMiddleware(options.filter || context, options));
   });
 
@@ -66,6 +70,7 @@ module.exports = async function overwriteHttpServer({
   app.use(staticPath, express.static('./static'));
 
   if (serving) {
+    console.info('shutdown prev httpServer');
     httpServer.close();
   }
 

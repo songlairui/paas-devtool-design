@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chokidar": "^2.0.4",
     "fs-monkey": "^0.3.3",
     "memfs": "^2.14.2",
     "memory-fs": "^0.4.1",

@@ -4,10 +4,11 @@ const { devMiddleware, hotMiddleware } = require('./middleware.js');
 
 const overwriteHttpServer = require('./dev-serv-factory');
 
-async function start() {
+async function start(proxyTarget) {
   const httpServer = await overwriteHttpServer({
     devMiddleware,
-    hotMiddleware
+    hotMiddleware,
+    proxyTarget
   });
   console.info('listening', httpServer.info);
 }
@@ -21,4 +22,4 @@ process.on('uncaughtException', function(err) {
   process.exit();
 });
 
-start();
+module.exports = start;

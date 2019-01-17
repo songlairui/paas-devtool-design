@@ -1,10 +1,8 @@
-// 检测 dev.cookie 中 cop_domain 变化
-const fs = require('fs');
 const path = require('path');
 const chokidar = require('chokidar');
 const resolve = require('resolve');
 
-const confFile = resolve.sync(path.resolve(__dirname, '../config'), {
+const confFile = resolve.sync(path.resolve(__dirname, './config'), {
   extensions: ['.js', '.json']
 });
 
@@ -17,15 +15,16 @@ let callback;
 
 devCookieWatcher.on('all', (type, fileName) => {
   console.info('all', type, fileName);
+  if (!path.extname(fileName)) return;
   try {
-    callback && callback(currEnv);
+    callback && callback();
   } catch (e) {
     console.warn(e && e.message);
   }
 });
 
 module.exports = {
-  setCallback(fn) {
+  use(fn) {
     callback = fn;
   }
 };
